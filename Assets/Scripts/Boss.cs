@@ -23,7 +23,7 @@ public class Boss : MonoBehaviour
         sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         yield return new WaitForSeconds(startAnimationLength);
         animator.enabled = false;
