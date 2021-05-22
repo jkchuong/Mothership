@@ -3127,6 +3127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7138621601254247291, guid: 41868fc40a959014f8266e4b112f023a,
         type: 3}
+      propertyPath: health
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138621601254247291, guid: 41868fc40a959014f8266e4b112f023a,
+        type: 3}
       propertyPath: pooler
       value: 
       objectReference: {fileID: 169499069}
