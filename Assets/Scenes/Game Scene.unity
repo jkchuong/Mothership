@@ -1398,6 +1398,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a8d437332e532d4fbe2b07b449eb943, type: 3}
+--- !u!1 &1048896478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7655324653997863324, guid: d571be1ae4ae8f742898ce8de0ee53af,
+    type: 3}
+  m_PrefabInstance: {fileID: 1259510656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1048896480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048896478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd0dd22a9e813b47908d2033e53d1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!223 &1114512626 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 22325660, guid: 58ac37417e60e534f91138088a3e6f70,
@@ -1632,7 +1650,7 @@ PrefabInstance:
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}
       propertyPath: randomRange
-      value: 17
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}
@@ -3312,7 +3330,7 @@ PrefabInstance:
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}
       propertyPath: randomRange
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}

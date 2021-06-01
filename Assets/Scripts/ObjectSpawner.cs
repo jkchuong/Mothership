@@ -32,4 +32,9 @@ public class ObjectSpawner : MonoBehaviour
     {
         return UnityEngine.Random.Range(-randomRange, randomRange);
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector3(randomRange*2, 1));
+    }
 }
