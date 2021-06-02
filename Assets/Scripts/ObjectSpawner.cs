@@ -11,7 +11,14 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] float delayBeforeSpawning = 20f;
     [SerializeField] float timeBetweenSpawning = 15f;
 
-    
+
+    private Player player;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
     IEnumerator Start()
     {
         yield return new WaitForSeconds(delayBeforeSpawning);
@@ -21,7 +28,12 @@ public class ObjectSpawner : MonoBehaviour
         }
         while (looping);
     }
-    
+
+    private void Update()
+    {
+        transform.position = new Vector3(player.transform.position.x, transform.position.y);
+    }
+
     private IEnumerator SpawnPowerUps()
     {
         Instantiate(Objects[UnityEngine.Random.Range(0, Objects.Length)], transform.position + (transform.right * RandomGen(randomRange)), Quaternion.identity);
@@ -31,5 +43,10 @@ public class ObjectSpawner : MonoBehaviour
     private float RandomGen(float randomRange)
     {
         return UnityEngine.Random.Range(-randomRange, randomRange);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector3(1 * randomRange * 2, 1));
     }
 }

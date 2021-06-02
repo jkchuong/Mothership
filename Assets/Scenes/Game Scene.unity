@@ -1632,7 +1632,7 @@ PrefabInstance:
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}
       propertyPath: randomRange
-      value: 17
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 7655324653997863326, guid: d571be1ae4ae8f742898ce8de0ee53af,
         type: 3}
