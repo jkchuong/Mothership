@@ -185,23 +185,30 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Triple Shoot"))
         {
+            
+            Debug.Log("Triple Shoot");
+            
             if (isTripleShootOn)
                 return;
             SetTripleShoot();
-            Invoke("SetTripleShoot", other.GetComponent<TripleShoot>().GetBuff());
+            Invoke(nameof(SetTripleShoot), other.GetComponent<TripleShoot>().GetBuff());
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Heal Pill"))
         {
+            Debug.Log("Heal Pill");
+
             health += other.GetComponent<HealPill>().GetHeal();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Invincibility"))
         {
+            Debug.Log("Invincibility");
+
             if (invincibility)
                 return;
             SetInvincibility();
-            Invoke("SetInvincibility", other.GetComponent<Invincibility>().GetBuff());
+            Invoke(nameof(SetInvincibility), other.GetComponent<Invincibility>().GetBuff());
             Destroy(other.gameObject);
         }
     }

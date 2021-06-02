@@ -47,6 +47,6 @@ public class ObjectSpawner : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireCube(transform.position, new Vector3(1 * randomRange * 2, 1));
+        Gizmos.DrawWireCube(transform.position, new Vector3(randomRange*2, 1));
     }
 }
