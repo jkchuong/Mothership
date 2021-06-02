@@ -14,7 +14,7 @@ public class Fader : MonoBehaviour
 
     public IEnumerator FadeOut(float time)
     {
-        while (canvasGroup.alpha < 1 && AudioListener.volume > 0)
+        while (canvasGroup.alpha < 1 || AudioListener.volume > 0)
         {
             canvasGroup.alpha += Time.deltaTime / time;
             AudioListener.volume -= Time.deltaTime / time;
@@ -24,7 +24,7 @@ public class Fader : MonoBehaviour
 
     public IEnumerator FadeIn(float time)
     {
-        while (canvasGroup.alpha > 0 && AudioListener.volume < 1)
+        while (canvasGroup.alpha > 0 || AudioListener.volume < 1)
         {
             canvasGroup.alpha -= Time.deltaTime / time;
             AudioListener.volume += Time.deltaTime / time;
