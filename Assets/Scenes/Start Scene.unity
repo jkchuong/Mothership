@@ -567,6 +567,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetLanguageJapanese
       objectReference: {fileID: 0}
+    - target: {fileID: 2667753677510909458, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3715bc22fbb9b834bba41d0a80ebf55f,
+        type: 3}
+    - target: {fileID: 2667753677510909458, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4701985120614770271, guid: 69c9d760828e3f844b51552ad7c02e29,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -695,6 +706,26 @@ PrefabInstance:
     - target: {fileID: 5277961155277945070, guid: 69c9d760828e3f844b51552ad7c02e29,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807413444972641809, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 457.4933
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807413444972641809, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 341.4381
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807413444972641809, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807413444972641809, guid: 69c9d760828e3f844b51552ad7c02e29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7011935707589552528, guid: 69c9d760828e3f844b51552ad7c02e29,

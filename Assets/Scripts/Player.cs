@@ -68,10 +68,10 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if (!isAutoFiring)
-        {
-            Fire();
-        }
+        // if (!isAutoFiring)
+        // {
+        //     Fire();
+        // }
     }
 
     private void Fire()
@@ -113,7 +113,8 @@ public class Player : MonoBehaviour
         GameObject laser = pooler.GetPooledObject();
         if (laser)
         {
-            laser.transform.position = transform.position;
+            // laser.transform.position = transform.position;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
             laser.transform.rotation = Quaternion.Euler(0, 0, -shotAngle);
             laser.SetActive(true);
         }
@@ -128,7 +129,7 @@ public class Player : MonoBehaviour
         GameObject laser = pooler.GetPooledObject();
         if (laser)
         {
-            laser.transform.position = transform.position;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
             laser.transform.rotation = Quaternion.identity;
             laser.SetActive(true);
         }
@@ -144,7 +145,7 @@ public class Player : MonoBehaviour
         GameObject laser = pooler.GetPooledObject();
         if (laser)
         {
-            laser.transform.position = transform.position;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
             laser.transform.rotation = Quaternion.Euler(0, 0, shotAngle);
             laser.SetActive(true);
         }
