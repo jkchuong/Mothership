@@ -187,7 +187,6 @@ public class Player : MonoBehaviour
         else if (other.CompareTag("Triple Shoot"))
         {
             
-            Debug.Log("Triple Shoot");
             
             if (isTripleShootOn)
                 return;
@@ -197,14 +196,12 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Heal Pill"))
         {
-            Debug.Log("Heal Pill");
 
             health += other.GetComponent<HealPill>().GetHeal();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Invincibility"))
         {
-            Debug.Log("Invincibility");
 
             if (invincibility)
                 return;

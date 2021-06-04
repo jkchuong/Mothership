@@ -622,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 11445008, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 228159b2669a68b4599bcdfa8ded32fd,
+      objectReference: {fileID: 12800000, guid: a0b9eb22947e9a442b40cac4e9ab8141,
         type: 3}
     - target: {fileID: 11455540, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_Font
@@ -650,11 +650,11 @@ PrefabInstance:
     - target: {fileID: 11489786, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 228159b2669a68b4599bcdfa8ded32fd,
+      objectReference: {fileID: 12800000, guid: a0b9eb22947e9a442b40cac4e9ab8141,
         type: 3}
     - target: {fileID: 11489786, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_MaxSize
-      value: 44
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11489786, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11489786, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11489786, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -2751,7 +2751,7 @@ PrefabInstance:
     - target: {fileID: 2268921327875100933, guid: 73147dc329f23ee4aaf2213cc41b2199,
         type: 3}
       propertyPath: language
-      value: ja
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5155172017831894083, guid: 73147dc329f23ee4aaf2213cc41b2199,
         type: 3}
@@ -3065,6 +3065,11 @@ PrefabInstance:
       propertyPath: spawnPosition
       value: 
       objectReference: {fileID: 600359821}
+    - target: {fileID: 7138621601254247291, guid: 41868fc40a959014f8266e4b112f023a,
+        type: 3}
+      propertyPath: messageDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7138621601254247294, guid: 41868fc40a959014f8266e4b112f023a,
         type: 3}
       propertyPath: m_Name

@@ -18,7 +18,7 @@ public class DeathText : MonoBehaviour
 
     public void HideMessage()
     {
-        message.text = String.Empty;
+        message.text = string.Empty;
     }
 
     public void ShowMessage()
@@ -29,8 +29,6 @@ public class DeathText : MonoBehaviour
 
     internal bool HasMessage()
     {
-        if (String.IsNullOrEmpty(message.text)) return false;
-
-        return true;
+        return !string.IsNullOrEmpty(message.text);
     }
 }
