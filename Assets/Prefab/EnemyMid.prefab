@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2486312609950377295}
   - component: {fileID: -3103590722329684519}
   - component: {fileID: -395729976485538282}
-  - component: {fileID: 3197864571385761335}
   - component: {fileID: 7502382875611891177}
   - component: {fileID: 1987278229424222787}
+  - component: {fileID: 7569652090819416989}
   m_Layer: 9
   m_Name: EnemyMid
   m_TagString: Enemy
@@ -124,22 +124,6 @@ MonoBehaviour:
   enemyLaserPrefab: {fileID: 4715594916363353653, guid: add2399b2819019438ed0f453b321445,
     type: 3}
   enemyProjectileSpeed: 10
---- !u!58 &3197864571385761335
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010743172795628790}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.68
 --- !u!50 &7502382875611891177
 Rigidbody2D:
   serializedVersion: 4
@@ -174,3 +158,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 200
+--- !u!70 &7569652090819416989
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010743172795628790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0051350594, y: 0.033378243}
+  m_Size: {x: 1.4585414, y: 2.570434}
+  m_Direction: 0

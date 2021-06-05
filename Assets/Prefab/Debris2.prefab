@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6359981765130204278}
   - component: {fileID: 6359981765130204277}
-  - component: {fileID: 6359981765130204276}
   - component: {fileID: 6359981765130204275}
   - component: {fileID: 6359981765130204274}
   - component: {fileID: 7979665551020360192}
+  - component: {fileID: 1840962079973689349}
+  - component: {fileID: 6196085661193888116}
   m_Layer: 0
   m_Name: Debris2
   m_TagString: Enemy
@@ -74,7 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b61344b528203340869f4189bd73352, type: 3}
+  m_Sprite: {fileID: 3186135477364673082, guid: 6fdeccb7f4839594a9461e8276eaa177,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6359981765130204276
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359981765130204273}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!50 &6359981765130204275
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +135,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   minSpeed: 3
+--- !u!114 &1840962079973689349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359981765130204273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3da2f0dde0b8d4b9b53f6bf560d6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 400
+--- !u!70 &6196085661193888116
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359981765130204273}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.47399998, y: 1.5380652}
+  m_Direction: 0

@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 302904932}
     - target: {fileID: 816499937, guid: 69c9d760828e3f844b51552ad7c02e29, type: 3}
       propertyPath: m_text
-      value: SUGIO GAMU
+      value: SUGOI GAMU
       objectReference: {fileID: 0}
     - target: {fileID: 2485424870836410898, guid: 69c9d760828e3f844b51552ad7c02e29,
         type: 3}

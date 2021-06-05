@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3261850093184062278}
   - component: {fileID: 4006469935544651197}
   - component: {fileID: 1344790086}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -126,8 +126,6 @@ MonoBehaviour:
   deathSoundVolume: 0.682
   invincibility: 0
   pooler: {fileID: 0}
-  laserPrefab: {fileID: 8733712653982324530, guid: 5879d98a4c1e1024e9c628d5010613e8,
-    type: 3}
   projectileSpeed: 25
   projectileDelay: 0.1
   shotSound: {fileID: 8300000, guid: 2ee5cc980c421814b94c55d6b0aa115e, type: 3}
@@ -136,7 +134,7 @@ MonoBehaviour:
   shotAngle: 10
   isAutoFiring: 1
   spawnPosition: {fileID: 0}
-  messageDuration: 4
+  messageDuration: 2
   invincibilityDuration: 10
 --- !u!114 &3261850093184062278
 MonoBehaviour:
@@ -228,18 +226,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00919044, y: 0.16083145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5571429, y: 2.31}
+    oldSize: {x: 2.18, y: 3.234}
     newSize: {x: 1.12, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3345916, y: 2.2}
+  m_Size: {x: 1.0956409, y: 2.65033}
   m_EdgeRadius: 0
 --- !u!95 &1344790086
 Animator:
