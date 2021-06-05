@@ -4,44 +4,42 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [Header("Player")]
-    [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float padding = 0.3f;
-    [SerializeField] int health = 1000;
-    [SerializeField] AudioClip deathSound;
-    [SerializeField] [Range(0,1)] float deathSoundVolume = 0.5f;
-    [SerializeField] bool invincibility = false;
+    [Header("Player")] [SerializeField] float moveSpeed = 10f;
+    [SerializeField] private float padding = 0.3f;
+    [SerializeField] private int health = 1000;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] [Range(0, 1)] private float deathSoundVolume = 0.5f;
+    [SerializeField] private bool invincibility;
 
-    [Header("Projectile")]
-    [SerializeField] ObjectPooler pooler;
-    [SerializeField] GameObject laserPrefab;
-    [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] float projectileDelay = 0.1f;
-    [SerializeField] AudioClip shotSound;
-    [SerializeField] [Range(0, 1)] float shotSoundVolume = 0.5f;
+    [Header("Projectile")] [SerializeField]
+    private ObjectPooler pooler;
 
-    [Header("Triple Projectile")]
-    [SerializeField] bool isTripleShootOn = false;
-    [SerializeField] float shotAngle = 10f;
+    [SerializeField] private float projectileSpeed = 10f;
+    [SerializeField] private float projectileDelay = 0.1f;
+    [SerializeField] private AudioClip shotSound;
+    [SerializeField] [Range(0, 1)] private float shotSoundVolume = 0.5f;
 
-    [SerializeField]
-    private bool isAutoFiring = true;
+    [Header("Triple Projectile")] [SerializeField]
+    bool isTripleShootOn = false;
 
-    [Header("Death")]
-    [SerializeField] Transform spawnPosition;
-    [SerializeField] float messageDuration = 4f;
-    [SerializeField] float invincibilityDuration = 10f;
+    [SerializeField] private float shotAngle = 10f;
 
-    DeathText deathText;
-    Animator myAnimator;
-    Coroutine firingCoroutine;
+    [SerializeField] private bool isAutoFiring = true;
 
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
+    [Header("Death")] [SerializeField] private Transform spawnPosition;
+    [SerializeField] private float messageDuration = 4f;
+    [SerializeField] private float invincibilityDuration = 10f;
 
-    bool isDead = false;
+    private DeathText deathText;
+    private Animator myAnimator;
+    private Coroutine firingCoroutine;
+
+    private float xMin;
+    private float xMax;
+    private float yMin;
+    private float yMax;
+
+    private bool isDead;
 
     private void Awake()
     {
@@ -50,7 +48,7 @@ public class Player : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         SetUpMoveBoundaries();
 
@@ -64,7 +62,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Move();
 
@@ -73,21 +71,21 @@ public class Player : MonoBehaviour
         //     Fire();
         // }
     }
-
-    private void Fire()
-    {
-        // Remove one of the alt inputs so we don't get two coroutines
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            firingCoroutine = StartCoroutine(FireContinuously());
-        }
-
-        if (Input.GetButtonUp("Fire1"))
-        {
-            StopCoroutine(firingCoroutine);
-        }
-    }
+    
+    // private void Fire()
+    // {
+    //     // Remove one of the alt inputs so we don't get two coroutines
+    //
+    //     if (Input.GetButtonDown("Fire1"))
+    //     {
+    //         firingCoroutine = StartCoroutine(FireContinuously());
+    //     }
+    //
+    //     if (Input.GetButtonUp("Fire1"))
+    //     {
+    //         StopCoroutine(firingCoroutine);
+    //     }
+    // }
 
     private IEnumerator FireContinuously()
     {
@@ -99,6 +97,7 @@ public class Player : MonoBehaviour
                 FiringLeft(shotAngle);
                 FiringRight(shotAngle);
             }
+
             PlayAudio(shotSound, shotSoundVolume);
             yield return new WaitForSeconds(projectileDelay);
         }
@@ -114,7 +113,7 @@ public class Player : MonoBehaviour
         if (laser)
         {
             // laser.transform.position = transform.position;
-            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
             laser.transform.rotation = Quaternion.Euler(0, 0, -shotAngle);
             laser.SetActive(true);
         }
@@ -129,23 +128,23 @@ public class Player : MonoBehaviour
         GameObject laser = pooler.GetPooledObject();
         if (laser)
         {
-            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
             laser.transform.rotation = Quaternion.identity;
             laser.SetActive(true);
         }
-        
+
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
     }
 
     private void FiringLeft(float shotAngle)
     {
-        float xVelocity = (projectileSpeed / Mathf.Tan(90 - Mathf.Abs(shotAngle))) * (shotAngle / -shotAngle) ;
+        float xVelocity = (projectileSpeed / Mathf.Tan(90 - Mathf.Abs(shotAngle))) * (shotAngle / -shotAngle);
         //GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.Euler(0, 0, shotAngle)) as GameObject;
 
         GameObject laser = pooler.GetPooledObject();
         if (laser)
         {
-            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f) ;
+            laser.transform.position = new Vector3(transform.position.x, transform.position.y + 1f);
             laser.transform.rotation = Quaternion.Euler(0, 0, shotAngle);
             laser.SetActive(true);
         }
@@ -173,8 +172,6 @@ public class Player : MonoBehaviour
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -186,8 +183,6 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Triple Shoot"))
         {
-            
-            
             if (isTripleShootOn)
                 return;
             SetTripleShoot();
@@ -196,13 +191,11 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Heal Pill"))
         {
-
             health += other.GetComponent<HealPill>().GetHeal();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Invincibility"))
         {
-
             if (invincibility)
                 return;
             SetInvincibility();
@@ -268,6 +261,4 @@ public class Player : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position, volume);
     }
-
-
 }
