@@ -14,8 +14,12 @@ public class Boss : MonoBehaviour
     [SerializeField]
     private float timeToStartSceneB = 20f;
 
-    Animator animator;
-    SceneLoader sceneLoader;
+    [SerializeField] private float timeToTransitionMother = 3f;
+
+    private float timeNotHit = 100f;
+    
+    private Animator animator;
+    private SceneLoader sceneLoader;
 
     private void Awake()
     {
@@ -26,11 +30,16 @@ public class Boss : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(startAnimationLength);
-        animator.enabled = false;
     }
 
     private void Update()
     {
+        timeNotHit += Time.deltaTime;
+        if (timeNotHit >= timeToTransitionMother)
+        {
+            animator.SetBool("isGettingHit", false);
+        }
+        
         timeToStartSceneB -= Time.deltaTime;
         if (timeToStartSceneB <= 0)
         {
@@ -43,6 +52,8 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Player Laser"))
         {
             collision.gameObject.SetActive(false);
+            animator.SetBool("isGettingHit", true);
+            timeNotHit = 0f;
 
             if (timeToStartSceneB <= 10f)
             {

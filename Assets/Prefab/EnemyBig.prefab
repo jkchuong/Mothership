@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3197864571385761335}
   - component: {fileID: 7502382875611891177}
   - component: {fileID: 1987278229424222787}
+  - component: {fileID: 431873472}
   m_Layer: 9
   m_Name: EnemyBig
   m_TagString: Enemy
@@ -75,10 +76,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b3c9a98d5f6777a46a6227e22e071b44, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0afbc315ac4975349a83bdff2540685b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.97, y: 0.84}
   m_AdaptiveModeThreshold: 0.5
@@ -137,9 +138,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010976076, y: 0.2707433}
   serializedVersion: 2
-  m_Radius: 0.79
+  m_Radius: 0.56681967
 --- !u!50 &7502382875611891177
 Rigidbody2D:
   serializedVersion: 4
@@ -174,3 +175,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 200
+--- !u!95 &431873472
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010743172795628790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d26d640d95b89a4b9f41ab5a290a411, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
