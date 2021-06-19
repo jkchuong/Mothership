@@ -10,7 +10,10 @@ public class ButtonManager : MonoBehaviour
     private GameSession gameSession;
     [SerializeField] private TextMeshProUGUI englishSettings;
     [SerializeField] private TextMeshProUGUI japaneseSettings;
-    
+    [SerializeField] private GameObject creditsCanvas;
+    [SerializeField] private GameObject startCanvas;
+    [SerializeField] private GameObject howToPlayCanvas;
+
     public void Awake()
     {
         sceneLoader = FindObjectOfType<SceneLoader>();
@@ -70,7 +73,14 @@ public class ButtonManager : MonoBehaviour
 
     public void LoadCreators()
     {
-        Debug.LogError("Creators and Credits not implemented");
+        creditsCanvas.SetActive(true);
+        startCanvas.SetActive(false);
+    }
+
+    public void ExitCreators()
+    {
+        creditsCanvas.SetActive(false);
+        startCanvas.SetActive(true);
     }
 
 }

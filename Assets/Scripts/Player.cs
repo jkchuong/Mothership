@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2f);
         myAnimator.enabled = false;
 
-        if (isAutoFiring)
+        if (isAutoFiring && pooler)
         {
             StartCoroutine(FireContinuously());
         }
