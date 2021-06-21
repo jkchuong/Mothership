@@ -88,6 +88,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartMenu()
     {
-        StartCoroutine(WaitAndLoad("Start Scene"));
+        StartCoroutine(QuickFadeOutSlowFadeIn("Start Scene"));
     }
 }

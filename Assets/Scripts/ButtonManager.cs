@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour
 {
     private SceneLoader sceneLoader;
     private GameSession gameSession;
+    private MusicPlayer musicPlayer;
     [SerializeField] private TextMeshProUGUI englishSettings;
     [SerializeField] private TextMeshProUGUI japaneseSettings;
     [SerializeField] private GameObject creditsCanvas;
@@ -18,11 +19,20 @@ public class ButtonManager : MonoBehaviour
     {
         sceneLoader = FindObjectOfType<SceneLoader>();
         gameSession = FindObjectOfType<GameSession>();
+        musicPlayer = FindObjectOfType<MusicPlayer>();
     }
 
     private void Start()
     {
-        englishSettings.color = Color.white;
+        if (englishSettings)
+        {
+            englishSettings.color = Color.white;
+        }
+
+        if (musicPlayer)
+        {
+            musicPlayer.PlayMusic();
+        }
     }
 
     public void LoadStartScene()

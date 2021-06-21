@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    private AudioSource audioSource;
+    
     void Awake()
     {
         SetUpSingleton();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void SetUpSingleton()
@@ -22,9 +25,16 @@ public class MusicPlayer : MonoBehaviour
         }    
     }
 
-    private void EndMusic()
+    
+    
+    public void StopMusic()
     {
-        Destroy(gameObject);
+        audioSource.Stop();
+    }
+
+    public void PlayMusic()
+    {
+        audioSource.Play();
     }
 
 }
