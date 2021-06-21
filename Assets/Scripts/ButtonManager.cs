@@ -66,21 +66,25 @@ public class ButtonManager : MonoBehaviour
         englishSettings.color = Color.yellow;
     }
 
-    public void LoadHowToPlay()
-    {
-        Debug.LogError("How to play scene not implemented");
-    }
-
     public void LoadCreators()
     {
         creditsCanvas.SetActive(true);
         startCanvas.SetActive(false);
+        howToPlayCanvas.SetActive(false);
     }
 
-    public void ExitCreators()
+    public void LoadStart()
     {
         creditsCanvas.SetActive(false);
         startCanvas.SetActive(true);
+        howToPlayCanvas.SetActive(false);
+    }
+
+    public void LoadHowTo()
+    {
+        creditsCanvas.SetActive(false);
+        startCanvas.SetActive(false);
+        howToPlayCanvas.SetActive(true);
     }
 
 }
