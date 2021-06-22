@@ -30,10 +30,14 @@ public class Player : MonoBehaviour
     [SerializeField] private float messageDuration = 4f;
     [SerializeField] private float invincibilityDuration = 10f;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite defaultImage;
+    [SerializeField] private Sprite damagedImage;
+
     private DeathText deathText;
     private Animator myAnimator;
     private Coroutine firingCoroutine;
-
+    
     private float xMin;
     private float xMax;
     private float yMin;
@@ -53,7 +57,6 @@ public class Player : MonoBehaviour
         SetUpMoveBoundaries();
 
         yield return new WaitForSeconds(2f);
-        myAnimator.enabled = false;
 
         if (isAutoFiring && pooler)
         {
@@ -65,27 +68,8 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Move();
-
-        // if (!isAutoFiring)
-        // {
-        //     Fire();
-        // }
+        myAnimator.SetBool("isDamaged", health < 1000);
     }
-    
-    // private void Fire()
-    // {
-    //     // Remove one of the alt inputs so we don't get two coroutines
-    //
-    //     if (Input.GetButtonDown("Fire1"))
-    //     {
-    //         firingCoroutine = StartCoroutine(FireContinuously());
-    //     }
-    //
-    //     if (Input.GetButtonUp("Fire1"))
-    //     {
-    //         StopCoroutine(firingCoroutine);
-    //     }
-    // }
 
     private IEnumerator FireContinuously()
     {
@@ -180,6 +164,7 @@ public class Player : MonoBehaviour
         if ((other.CompareTag("Enemy Laser") || other.CompareTag("Enemy")) && !invincibility)
         {
             ProcessHit(damageDealer);
+            myAnimator.SetTrigger("playerHit");
         }
         else if (other.CompareTag("Triple Shoot"))
         {
@@ -218,6 +203,7 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        
         if (health <= 0 && !isDead)
         {
             StartCoroutine(Die());
@@ -245,7 +231,7 @@ public class Player : MonoBehaviour
 
         yield return fader.FadeIn(1f);
 
-        health = 1000;
+        health = 3000;
         invincibility = true;
         yield return new WaitForSeconds(invincibilityDuration);
         invincibility = false;
