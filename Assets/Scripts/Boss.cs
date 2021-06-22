@@ -16,6 +16,7 @@ public class Boss : MonoBehaviour
 
     [SerializeField] private float timeToTransitionMother = 3f;
 
+    private bool isLoading = false;
     private float timeNotHit = 100f;
     
     private Animator animator;
@@ -34,6 +35,8 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
+        if (isLoading) return;
+        
         timeNotHit += Time.deltaTime;
         if (timeNotHit >= timeToTransitionMother)
         {
@@ -44,6 +47,7 @@ public class Boss : MonoBehaviour
         if (timeToStartSceneB <= 0)
         {
             sceneLoader.LoadMissScene();
+            isLoading = true;
         }
     }
 
@@ -65,6 +69,7 @@ public class Boss : MonoBehaviour
             if (hitsToStartSceneA <= 0)
             {
                 sceneLoader.LoadKillScene();
+                isLoading = true;
             }
         }
     }
