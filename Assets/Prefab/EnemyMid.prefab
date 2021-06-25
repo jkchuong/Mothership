@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7502382875611891177}
   - component: {fileID: 1987278229424222787}
   - component: {fileID: 7569652090819416989}
+  - component: {fileID: -1829260927202158079}
   m_Layer: 9
   m_Name: EnemyMid
   m_TagString: Enemy
@@ -168,9 +169,28 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0051350594, y: 0.033378243}
   m_Size: {x: 1.4585414, y: 2.570434}
   m_Direction: 0
+--- !u!95 &-1829260927202158079
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010743172795628790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef7c218902f318b469d3a5d5a19f65b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

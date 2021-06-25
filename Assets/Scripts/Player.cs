@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
 
     private bool isDead;
 
+    private float timeNotHit = 100f;
+    private float timeToTransitionDamage = 0.5f;
+
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
@@ -68,7 +71,13 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Move();
-        myAnimator.SetBool("isDamaged", health < 1000);
+        myAnimator.SetBool("isDamaged", health < 2000);
+        
+        timeNotHit += Time.deltaTime;
+        if (timeNotHit >= timeToTransitionDamage)
+        {
+            myAnimator.SetBool("playerGettingHit", false);
+        }
     }
 
     private IEnumerator FireContinuously()
@@ -164,7 +173,8 @@ public class Player : MonoBehaviour
         if ((other.CompareTag("Enemy Laser") || other.CompareTag("Enemy")) && !invincibility)
         {
             ProcessHit(damageDealer);
-            myAnimator.SetTrigger("playerHit");
+            myAnimator.SetBool("playerGettingHit", true);
+            timeNotHit = 0f;
         }
         else if (other.CompareTag("Triple Shoot"))
         {
