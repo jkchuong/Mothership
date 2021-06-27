@@ -2591,12 +2591,12 @@ PrefabInstance:
     - target: {fileID: 7138621601254247289, guid: 41868fc40a959014f8266e4b112f023a,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7138621601254247291, guid: 41868fc40a959014f8266e4b112f023a,
         type: 3}
       propertyPath: health
-      value: 1001
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 7138621601254247294, guid: 41868fc40a959014f8266e4b112f023a,
         type: 3}

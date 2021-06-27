@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
     [Header("Death")] [SerializeField] private Transform spawnPosition;
     [SerializeField] private float messageDuration = 4f;
-    [SerializeField] private float invincibilityDuration = 10f;
+    [SerializeField] private float invincibilityDuration = 5f;
 
     [Header("Sprites")]
     [SerializeField] private Sprite defaultImage;
@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
 
         yield return fader.FadeIn(1f);
 
-        health = 3000;
+        health = 4000;
         invincibility = true;
         yield return new WaitForSeconds(invincibilityDuration);
         invincibility = false;
