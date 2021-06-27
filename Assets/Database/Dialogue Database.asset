@@ -252,9 +252,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(entrytag [var=AudioLang]);
-
-          Delay(5);'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: ja
@@ -313,9 +311,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(entrytag [var=AudioLang]);
-
-          Delay(5);'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: ja
@@ -374,9 +370,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(entrytag [var=AudioLang]);
-
-          Delay(5);'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: ja
@@ -435,9 +429,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(entrytag [var=AudioLang]);
-
-          Delay(5);'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: ja
@@ -496,9 +488,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(entrytag [var=AudioLang]);
-
-          Delay(5);'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: ja
@@ -521,11 +511,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 270
+        y: 268.9362
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 6.382965}
+    canvasZoom: 0.9400001
   - id: 2
     fields:
     - title: Title
@@ -921,7 +911,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 320
+        y: 322
         width: 160
         height: 30
     - id: 6
@@ -1272,8 +1262,8 @@ MonoBehaviour:
         y: 570
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 2.2727356, y: 186.36362}
+    canvasZoom: 0.8800001
   syncInfo:
     syncActors: 0
     syncItems: 0
