@@ -3,5 +3,5 @@ This game features a spaceship shooting at incoming enemies, avoiding enemy fire
 
 The game can be played at [itch.io](https://jcsoup.itch.io/slime-together)
 
-Artist: [caccaccactus](https://github.com/caccaccactus)
-Programmer: jkchuong
+Artist: [caccaccactus](https://github.com/caccaccactus)  
+Programmer: [jkchuong](https://github.com/jkchuong)
