@@ -1,4 +1,7 @@
 # Game1
-First game designed and created personally
-Use to test Unity source control with imported assets and packages.
-Hitomi has been added as a collaborator for this project, contributing art, animations, and dialogue. 
+This game features a spaceship shooting at incoming enemies, avoiding enemy fire and debris.
+
+The game can be played at [itch.io](https://jcsoup.itch.io/slime-together)
+
+Artist: [caccaccactus](https://github.com/caccaccactus)
+Programmer: jkchuong
